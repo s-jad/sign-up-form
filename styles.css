@@ -42,6 +42,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-size: 1.2rem;
+  font-family: 'Ysabeau Office', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -108,6 +109,7 @@ select {
 
 #bg-img {
     height: 100svh;
+    width: 100%;
 }
 
 #bg-img-wrapper {
@@ -116,16 +118,16 @@ select {
 
 #bg-img-wrapper::after {
     position: absolute;
-    height: 22%;
+    height: 30vh;
     width: 100%;
-    top: 40%;
-    left: 0;
+    top: 35vh;
     z-index: 10;
     padding: 1.5rem 1rem;
     content: "The Gardening Project";
     text-align: center;
-    font-size: 3rem;
-    font-weight: 900;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 700;
     background: hsla(6, 25%, 10%, 0.5);
     color: var(--accent-clr-95);
 }
@@ -169,7 +171,7 @@ select {
     align-items: center;
     padding-right: 14rem;
     justify-content: left;
-    gap: 1rem;
+    gap: 0rem 1rem;
 }
 
 .input-container {
@@ -180,12 +182,14 @@ select {
 
 #motivator {
     padding-top: 1rem;
-    padding-left: 0.5rem;
-    font-size: 1.5rem;
+    padding-left: 3rem;
+    font-size: 2.2rem;
+    font-family: 'Dancing script', cursive;
     color: var(--accent-clr-txt);
 }
 
 #create-account-btn {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     padding: 1rem 2rem;
     box-shadow: 0 2px 3px hsl(0, 10%, 87%),
@@ -219,6 +223,7 @@ input {
 input:hover,
 input:focus {
     box-shadow: inset 0 0 2px var(--accent-clr-60);
+    outline: 1px solid var(--accent-clr-bdr);
 }
 
 input[required]:valid,
