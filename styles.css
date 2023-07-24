@@ -96,6 +96,7 @@ select {
 
     --accent-clr-bdr: hsla(6, 25%, 30%, 0.4);
     --accent-clr-98: hsl(6, 26%, 98%);
+    --valid-clr-60: hsl(90, 90%, 60%)
 }
 
 .outer-wrapper {
@@ -187,7 +188,8 @@ select {
 #create-account-btn {
     margin-bottom: 1rem;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 3px hsl(0, 10%, 87%);
+    box-shadow: 0 2px 3px hsl(0, 10%, 87%),
+                inset 0 0 1px var(--accent-clr-60);
     background: var(--accent-clr-95);
     border: 1px solid var(--accent-clr-bdr);
     border-radius: 0.5rem;
@@ -212,4 +214,21 @@ input {
     border: 1px solid var(--accent-clr-bdr);
     background: var(--accent-clr-98);
     border-radius: 0.5rem;
+}
+
+input:hover,
+input:focus {
+    box-shadow: inset 0 0 2px var(--accent-clr-60);
+}
+
+input[required]:valid,
+input[required]:valid:hover,
+input[required]:valid:focus {
+    border: 1px solid var(--valid-clr-60);
+    box-shadow: inset 0 0 2px var(--valid-clr-60);
+}
+
+input[required]:invalid:hover,
+input[required]:invalid:focus {
+    border: 1px solid var(--accent-clr-60);
 }

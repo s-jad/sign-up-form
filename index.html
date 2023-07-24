@@ -29,7 +29,7 @@
                         </div>
                         <div class="input-container">
                             <label for="user-email">Email</label>
-                            <input id="user-email" name="user-email" type="email">
+                            <input id="user-email" name="user-email" type="email" required>
                         </div>
                         <div class="input-container">
                             <label for="user-phone-no">Phone number</label>
@@ -37,11 +37,15 @@
                         </div>
                         <div class="input-container">
                             <label for="user-pass">Password</label>
-                            <input id="user-pass" name="user-pass" type="password">
+                            <input id="user-pass" name="user-pass" type="password"
+                            title="Password must be between 8-40 characters"
+                            minlength="8" maxlength="40" required>
                         </div>
                         <div class="input-container">
                             <label for="user-pass-confirm">Confirm Password</label>
-                            <input id="user-pass-confirm" name="user-pass-confirm" type="password"> 
+                            <input id="user-pass-confirm" name="user-pass-confirm" type="password"
+                            title="Password must be between 8-40 characters"
+                            minlength="8" maxlength="40" required> 
                         </div>
                     </div>
                 </form>
