@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Ysabeau+Office:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
     <title>Sign Up Form</title>
 </head>
 <body>
@@ -16,11 +17,12 @@
         </div>
             <div class="right-wrapper">
                 <div class="cta-wrapper">
-                    <h2 id="cta">Sign up for an adventure ...<br> you know your want to!</h2>
+                    <h2 id="cta">Begin your gardening adventure here...<br>and
+                        watch it grow!</h2>
                 </div>
                 <div class="form-wrapper">
                 <form id="main-form" action="#" method="get">
-                    <legend id="motivator">Lets do this!</legend>
+                    <legend id="motivator">Plant a seed!</legend>
                     <div class="main-input-container">
                         <div class="input-container">
                             <label for="first-name">First Name</label>
@@ -39,7 +41,7 @@
                         </div>
                         <div class="input-container">
                             <label for="user-phone-no">Phone number</label>
-                            <input id="user-phone-no" name="user-phone-no" type="tel">
+                            <input id="user-phone-no" name="user-phone-no" type="tel" autocomplete="tel">
                         </div>
                         <div class="input-container">
                             <label for="user-pass">Password</label>
@@ -54,6 +56,8 @@
                             minlength="8" maxlength="40" required> 
                         </div>
                     </div>
+                    <div id="email-validation-display"></div>
+                    <div id="password-validation-display"></div>
                 </form>
             </div>
             <div class="login-wrapper">
