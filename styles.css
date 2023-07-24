@@ -80,8 +80,23 @@ select {
   }
 }
 
+:root {
+    --main-clr-95: hsl(191, 65%, 95%);
+    --secondary-clr-95: hsl(58, 95%, 95%);
+    --accent-clr-95: hsl(6, 36%, 95%);
+    --main-clr-60: hsl(191, 65%, 60%);
+    --secondary-clr-60: hsl(58, 95%, 60%);
+    --accent-clr-60: hsl(6, 65%, 60%);
+    --main-clr-30: hsl(191, 25%, 30%);
+    --secondary-clr-30: hsl(58, 25%, 30%);
+    --accent-clr-30: hsl(6, 25%, 30%);
+    --main-clr-txt: hsl(191, 45%, 5%);
+    --secondary-clr-txt: hsl(58, 45%, 5%);
+    --accent-clr-txt: hsl(6, 45%, 5%);
+}
+
 .outer-wrapper {
-    background: hsl(0, 30%, 97%);
+    background: var(--main-clr-95);
     display: grid;
     grid-template-columns: 1fr 2fr;
     height: 100svh;
@@ -89,6 +104,26 @@ select {
 
 #bg-img {
     height: 100svh;
+}
+
+#bg-img-wrapper {
+    position: relative;
+}
+
+#bg-img-wrapper::after {
+    position: absolute;
+    height: 22%;
+    width: 100%;
+    top: 40%;
+    left: 0;
+    z-index: 10;
+    padding: 1.5rem 1rem;
+    content: "The Gardening Project";
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    background: hsla(6, 25%, 10%, 0.5);
+    color: var(--accent-clr-95);
 }
 
 #main-form {
@@ -113,8 +148,9 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0rem 2rem;
-    background: #fff;
+    padding: 1rem 2rem;
+    background: var(--secondary-clr-95);
+    box-shadow: 0 2px 5px hsl(0, 10%, 87%);
 }
 
 .login-wrapper {
@@ -127,7 +163,8 @@ select {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: center;
+    padding-right: 14rem;
+    justify-content: left;
     gap: 1rem;
 }
 
@@ -137,7 +174,28 @@ select {
     gap: 1rem;
 }
 
+#motivator {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--accent-clr-txt);
+}
+
 #create-account-btn {
     margin-bottom: 1rem;
     padding: 1rem 2rem;
+    box-shadow: 0 2px 3px hsl(0, 10%, 87%);
+    background: var(--accent-clr-95);
+    border: 1px solid var(--accent-clr-30);
+    border-radius: 0.5rem;
+}
+
+label {
+    margin-left: 1rem;
+    color: var(--main-clr-txt);
+}
+
+input {
+    border: 1px solid hsl(0, 10%, 77%);
+    border-radius: 0.5rem;
 }
