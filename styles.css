@@ -41,7 +41,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: clamp(18px, 1.8rem, 2.2rem);
   font-family: 'Ysabeau Office', sans-serif;
 }
 
@@ -110,14 +110,19 @@ select {
 #bg-img {
     height: 100svh;
     width: 100%;
+    object-fit: cover;
 }
 
 #bg-img-wrapper {
     position: relative;
+    min-width: 30vw;
 }
 
 #bg-img-wrapper::after {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 30vh;
     width: 100%;
     top: 35vh;
@@ -126,7 +131,7 @@ select {
     content: "The Gardening Project";
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    font-size: 4rem;
+    font-size: max(32px, 4rem);
     font-weight: 700;
     background: hsla(6, 25%, 10%, 0.5);
     color: var(--accent-clr-95);
@@ -182,14 +187,12 @@ select {
 
 #motivator {
     padding-top: 1rem;
-    padding-left: 3rem;
-    font-size: 2.2rem;
+    font-size: max(24px, 2.8rem);
     font-family: 'Dancing script', cursive;
     color: var(--accent-clr-txt);
 }
 
 #create-account-btn {
-    font-size: 1.5rem;
     margin-bottom: 1rem;
     padding: 1rem 2rem;
     box-shadow: 0 2px 3px hsl(0, 10%, 87%),
@@ -216,6 +219,7 @@ label {
 input {
     border: 1px solid var(--accent-clr-bdr);
     background: var(--accent-clr-98);
+    padding: 0.2rem 0.5rem;
     border-radius: 0.5rem;
 }
 
@@ -236,4 +240,36 @@ input[required]:invalid,
 input[required]:invalid:hover,
 input[required]:invalid:focus {
     border: 1px solid var(--accent-clr-60);
+}
+
+@media (width < 880px) {
+    .main-input-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding-right: 14rem;
+    }
+}
+
+@media (width < 600px) {
+    .main-input-container {
+        padding-right: 3vw;
+    }
+}
+
+@media (width < 400px) {
+    #bg-img {
+        height: 50svh;
+    }
+
+    #bg-img-wrapper::after {
+        top: 20%;
+    }
+
+    .outer-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .main-input-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding-right: 1vw;
+    }
 }
