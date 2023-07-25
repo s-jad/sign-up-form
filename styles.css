@@ -41,7 +41,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-size: clamp(18px, 1.8rem, 2.2rem);
+  font-size: clamp(16px, 1.6rem, 2.2rem);
   font-family: 'Ysabeau Office', sans-serif;
 }
 
@@ -83,6 +83,8 @@ select {
 
 :root {
     --main-clr-95: hsl(191, 65%, 95%);
+    --main-clr-95-fade-10: hsla(191, 65%, 95%, 0.1);
+    --main-clr-95-fade-85: hsla(191, 65%, 95%, 0.85);
     --secondary-clr-95: hsl(58, 95%, 95%);
     --accent-clr-95: hsl(6, 36%, 95%);
     --main-clr-60: hsl(191, 65%, 60%);
@@ -123,9 +125,9 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 80%;
     width: 100%;
-    top: 35vh;
+    top: 10%;
     z-index: 10;
     padding: 1.5rem 1rem;
     content: "The Gardening Project";
@@ -133,7 +135,7 @@ select {
     font-family: 'Dancing Script', cursive;
     font-size: max(32px, 4rem);
     font-weight: 700;
-    background: hsla(6, 25%, 10%, 0.5);
+    background: radial-gradient(circle at center, hsla(6, 25%, 10%, 0.8) 0%, hsla(6, 25%, 10%, 0) 90%);
     color: var(--accent-clr-95);
 }
 
@@ -141,10 +143,21 @@ select {
     width: 100%;
 }
 
+
+.outer-right-wrapper {
+    min-height: 100svh; 
+    background-image: url(/dmytro-tolokonov-Jq3WI9IQgEs-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+}
+
 .right-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    min-height: 100svh;
+    background: linear-gradient(to left, var(--main-clr-95-fade-10) 0%, var(--main-clr-95) 80%);
 }
 
 .cta-wrapper {
@@ -167,6 +180,8 @@ select {
 .login-wrapper {
     flex: 1;
     padding: 0rem 2rem;
+    background: transparent;
+    transition: background 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .main-input-container {
@@ -242,10 +257,31 @@ input[required]:invalid:focus {
     border: 1px solid var(--accent-clr-60);
 }
 
+
 @media (width < 880px) {
     .main-input-container {
         grid-template-columns: repeat(1, 1fr);
         padding-right: 14rem;
+    }
+    .login-wrapper {
+        background: var(--main-clr-95);
+        transition: background 300ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+    
+
+
+    .right-wrapper {
+        gap: 0;
+    }
+
+    #create-account-btn {
+        margin-top: 2rem;
+    }
+}
+
+@media (width < 840px) {
+    .outer-right-wrapper {
+        background-size: 100% auto;
     }
 }
 
@@ -266,6 +302,23 @@ input[required]:invalid:focus {
 
     .outer-wrapper {
         grid-template-columns: 1fr;
+    }
+
+    .right-wrapper {
+        background: var(--main-clr-95-fade-85);
+    }
+
+    .cta-wrapper {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .main-input-container {
