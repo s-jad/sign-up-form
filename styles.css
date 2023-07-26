@@ -258,7 +258,6 @@ button {
     left: 5px;
 }
 
-
 .input-container > label:has(+ input:invalid) {
     color: var(--accent-clr-60);
 }
@@ -336,6 +335,8 @@ input[required]:invalid:focus {
 .modal-title {
     grid-column: 1/3;
 }
+
+/* RESPONSIVENESS */
 
 @media (max-aspect-ratio: 1/1), (orientation: portrait) {
     .modal-container {
