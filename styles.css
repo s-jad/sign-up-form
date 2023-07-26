@@ -150,7 +150,7 @@ select {
 
 .outer-right-wrapper {
     min-height: 100svh; 
-    background-image: url(/dmytro-tolokonov-shrunk.jpg);
+    background-image: url(./images/dmytro-tolokonov-shrunk.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     object-fit: cover;
@@ -303,7 +303,7 @@ input[required]:invalid:focus {
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url(/dmytro-tolokonov-shrunk.jpg);
+    background-image: url(./images/dmytro-tolokonov-shrunk.jpg);
     background-repeat: no-repeat;
     background-size: 100% auto;
     z-index: 10;
